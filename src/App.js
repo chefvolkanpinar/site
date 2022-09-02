@@ -19,9 +19,12 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import MailIcon from '@mui/icons-material/Mail';
-import FavoriteIcon from '@mui/icons-material/Favorite';
+import LocalDiningIcon from '@mui/icons-material/LocalDining';
 import ContactUs from '../src/component/form';
-
+import BasicRating from './component/ratin';
+import Container from '@mui/material/Container';
+import Futo from './component/foto';
+import Karussel from './component/carousel';
 
 
 const drawerWidth = 240;
@@ -104,9 +107,9 @@ export default function MiniDrawer() {
   };
 
   return (
-    <div id="root">
 
-
+<Container>
+  <Karussel></Karussel>
     <Box  sx={{ display: 'flex' }}>
       <CssBaseline />
       <AppBar position="fixed" id="nav" open={open}>
@@ -124,8 +127,7 @@ export default function MiniDrawer() {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" id="name" noWrap component="div">
-
-            Ö&k
+              Chef Volkan Pınar
 
           </Typography>
         </Toolbar>
@@ -137,8 +139,8 @@ export default function MiniDrawer() {
           </IconButton>
         </DrawerHeader>
         <Divider/>
-        <List>
-          {['Hehe', 'Mail yollasana'].map((text, index) => (
+        <List id="yazi">
+          {['Yemekler', 'Iletisim'].map((text, index) => (
             <ListItem key={text} disablePadding sx={{ display: 'block' }}>
               <ListItemButton
                 sx={{
@@ -154,7 +156,7 @@ export default function MiniDrawer() {
                     justifyContent: 'center',
                   }}
                 >
-                  {index % 2 === 0 ? <FavoriteIcon id="Heart"/> : <MailIcon />}
+                  {index % 2 === 0 ? <LocalDiningIcon id="iconyemek"/> : <MailIcon id="iconyemek"/>}
                 </ListItemIcon>
                 <ListItemText primary={text} sx={{ opacity: open ? 1 : 0 }} />
               </ListItemButton>
@@ -165,14 +167,59 @@ export default function MiniDrawer() {
       </Drawer>
       <Box  component="main" sx={{ flexGrow: 1, p: 3 }}>
         <DrawerHeader />
-        <Typography paragraph>
 
-        </Typography>
-        <Typography paragraph>
-         </Typography>
       </Box>
     </Box>
+<div id="text">
+
+<h5>
+    Volkan Pinar aka "Lö..."  2004 yilinda dogmustur
+    dogumundan itibaren bir cok basariya imza atan volkanin en buyuk basarilarindan biri;
+     
+    </h5>
+
+
+
+
+<p>
+Bir Gün Volkan Pinar unlu bir asciyla iddiaya girer iddia soyledir;
+
+ 
+her ikiside dunya mutfaklarinin her birinden birer yemek yapacaktir ve kazanan juri tarafindan belirlenecektir
+
+
+
+Kaybeden ise Ismini Vedat Milör Olarak degistirecektir Volkan Pinar Kazanmistir ve Kaybeden yarismaci ise Ismini vedat milör yaparak unlu bir gurme olmustur.
+</p>
+
+
+<h4>volkan Pinarin Yaptigi bazi meslekler</h4>
+
+<ul>
+<li>Simitcilik</li>
+
+<li>Kapora Tamirciligi</li>
+
+<li>Merdiven alti tütün kacakciligi</li>
+
+<li>Zencilik</li>
+
+<li>75lik raki</li>
+</ul>
+
+
+</div>
+
+
 <ContactUs></ContactUs>
-    </div>
+<div id="cus">
+
+<BasicRating ></BasicRating>
+
+</div>
+<div id="armagan">
+<h6>Bu Site Volkan Pinara Ömer Faruk Kulaksiz Tarafindan Armagan edilmistir</h6>
+</div>
+    </Container>
   );
 }

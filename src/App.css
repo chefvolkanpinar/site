@@ -1,27 +1,32 @@
 #root{
-  background-color: #FFF9CA;
+  background-color: whitesmoke;
   min-height: 100vh;
+  text-align: center;
+  
 }
 #nav{
-  background-color: #B2A4FF;
+  background-color: #232432;
 }
 #name{
   font-weight: bold;
 }
 #Heart{
-  color: #f06f6f;
 }
 
 .css-12i7wg6-MuiPaper-root-MuiDrawer-paper{
-  background-color: #FFB4B4 !important;
+  background-color: #232432 !important;
+
 
 }
 #form{
-  background-color: whitesmoke;
-  border-radius: 15px;
+
+
+  
 }
 #formContainer{
-  max-width: 70vh;
+padding-bottom: 1px;
+margin-left: 5vh;
+
 
 }
 #input1{
@@ -32,4 +37,47 @@
 }
 #buton1{
 margin-top: 10px;
+}
+#foto{
+  width: 50vh;
+  padding-top: 15vh;
+}
+#cop{
+float: right;
+
+}
+#carouselExampleIndicators{
+margin-top: 10vh;
+margin-left: 10vh;
+}
+#border{
+  border-color: black;
+  border-width: 10px;
+  width: inherit;
+  height: inherit;
+}
+#iconyemek{
+  color: whitesmoke;
+}
+#yazi{
+  color: wheat;
+}
+#text{
+font-weight: bolder;
+font-family: serif;
+width: 50vh;
+font-size: 12px;
+padding-left: 10vh;
+padding-right: 2vh;
+}
+h4{
+  padding-top: 10vh;
+}
+#armagan{
+  width: 50vh;
+  padding-left: 10vh;
+padding-right: 2vh;
+}
+#cus{
+  padding-left: 10vh;
 }
